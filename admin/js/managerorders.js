@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var localURL = "http://localhost/api/ordermanager/";
+    var localURL = "http://localhost:81/api/ordermanager/";
     var remoteURL = "http://practice.relex.ru:81/api/ordermanager/";
     var id;
     var phone;
@@ -34,8 +34,8 @@ $(document).ready(function() {
             type: "GET",
             dataType: "json",
             contentType: "application/json",
-            url: remoteURL,
-            // url: localURL,
+            // url: remoteURL,
+            url: localURL,
             success: function (data) {
                 console.log("SUCCESS: ", data);
                 CreateManagerTable(data);
@@ -52,8 +52,8 @@ $(document).ready(function() {
      */
     $("#btn-search").click(function() {
         if (!/\D/.test(id)) {
-            var searchURL = remoteURL + "?id=" + id + "&phone=" + phone + "&name=" + name;
-            // var searchURL = localURL + "?id=" + id + "&phone=" + phone + "&name=" + name;
+            // var searchURL = remoteURL + "?id=" + id + "&phone=" + phone + "&name=" + name;
+            var searchURL = localURL + "?id=" + id + "&phone=" + phone + "&name=" + name;
             searchURL = searchURL.replace("+", "%2B");
             $.ajax({
                 type: "GET",

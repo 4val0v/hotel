@@ -13,8 +13,7 @@ import java.util.Date;
 public class Stat {
 
     @Id
-    @SequenceGenerator(name = "statIdSeq", sequenceName = "STATS_ID_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "statIdSeq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
 

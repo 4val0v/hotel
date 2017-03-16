@@ -8,8 +8,7 @@ import java.util.Date;
 public class Order {
 
     @Id
-    @SequenceGenerator(name = "orderIdSec", sequenceName = "ORDERS_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "orderIdSec")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
 

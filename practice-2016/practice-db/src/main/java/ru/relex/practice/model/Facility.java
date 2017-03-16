@@ -11,8 +11,7 @@ import java.util.Set;
 public class Facility {
 
     @Id
-    @SequenceGenerator(name = "facilityIdSeq", sequenceName = "FACILITY_ID_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "facilityIdSeq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private int id;
 

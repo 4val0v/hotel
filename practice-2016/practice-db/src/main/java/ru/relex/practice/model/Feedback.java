@@ -16,8 +16,7 @@ public class Feedback {
     private String message;
 
     @Id
-    @SequenceGenerator(name = "feedbackIdSeq", sequenceName = "FEEDBACK_ID_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "feedbackIdSeq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     public int getId() {
         return id;

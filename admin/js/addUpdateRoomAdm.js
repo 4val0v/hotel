@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded",function(){
             type:'GET',
             contentType: 'application/json',
             dataType: 'json',
-/*            url: 'http://localhost/practice-web/rooms/idd?id=' + roomId,*/
-            url: 'http://practice.relex.ru:81/api/rooms/idd?id=' + roomId,
+            url: 'http://localhost:81/api/rooms/idd?id=' + roomId,
+            // url: 'http://practice.relex.ru:81/api/rooms/idd?id=' + roomId,
             success: function(data, json){
                          doc.getElementById('room-number').innerHTML = data.id;
                          doc.getElementById('room-short-description').value = data.shortDescription;
@@ -110,8 +110,8 @@ document.addEventListener("DOMContentLoaded",function(){
                 contentType: 'application/json',
                 dataType: 'json',
                 data: jsonData,
-/*                url: 'http://localhost/practice-web/api/rooms/update',*/
-                url: 'http://practice.relex.ru:81/api/api_rooms/update',
+                url: 'http://localhost:81/api/rooms/update',
+                // url: 'http://practice.relex.ru:81/api/api_rooms/update',
                 success: function(data, json){}
             });
         } else {
@@ -136,8 +136,8 @@ document.addEventListener("DOMContentLoaded",function(){
                 contentType: 'application/json',
                 dataType: 'json',
                 data: jsonData,
-/*                url: 'http://localhost/practice-web/api/rooms/add',*/
-                url: 'http://practice.relex.ru:81/api/api_rooms/add',
+                url: 'http://localhost:81/api/rooms/add',
+                // url: 'http://practice.relex.ru:81/api/api_rooms/add',
 /*                success: function(data, json){*/
                 success: function(data){
                              alert(data);

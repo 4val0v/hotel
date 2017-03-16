@@ -9,8 +9,7 @@ import java.time.LocalDate;
 public class RoomPrice {
 
     @Id
-    @SequenceGenerator(name = "roomPriceIdSeq", sequenceName = "ROOM_PRICE_ID_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "roomPriceIdSeq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private int id;
 

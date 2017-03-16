@@ -6,7 +6,7 @@ function getEmail() {
     console.log(addressJsn);
     $.ajax({
         type: 'POST',
-        url: 'http://practice.relex.ru:81/api/',
+        url: 'http://localhost:81/api/',
         contentType: 'application/json',
         data: addressJsn,
         success: function () {

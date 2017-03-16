@@ -29,8 +29,7 @@ public class Room {
 
     @Id
     @Column(name = "ID")
-    @SequenceGenerator(name = "roomIdSeq", sequenceName = "ROOM_ID_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "roomIdSeq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {
         return id;
     }

@@ -20,8 +20,7 @@ import javax.persistence.Table;
 public class RoomComment {
 	
 	@Id
-	@SequenceGenerator(name = "commentIdSec", sequenceName = "COMMENT_ID_SEQ", allocationSize = 1)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "commentIdSec")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
 	private Long id;
 	

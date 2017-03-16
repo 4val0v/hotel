@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     var orders = {};
     var orderStatus = ["HOLD", "ORDERED", "CLOSED"];
-    var localURL = "http://localhost/api/ordermanager/";
+    var localURL = "http://localhost:81/api/ordermanager/";
     var remoteURL = "http://practice.relex.ru:81/api/ordermanager/";
 
     refreshTable();
@@ -19,8 +19,8 @@ $(document).ready(function() {
         $.ajax({
             type: "POST",
             contentType: "application/json",
-            url:  remoteURL + orderId,
-            // url:  localURL + orderId,
+            // url:  remoteURL + orderId,
+            url:  localURL + orderId,
             dataType: "json",
             data: JSON.stringify(currentOrder),
             success: function (data) {
@@ -42,8 +42,8 @@ $(document).ready(function() {
         var orderId = extractOrderIdFromBtn(btnId);
         $.ajax({
             type: "DELETE",
-            url:  remoteURL + orderId,
-            // url: localURL + orderId,
+            // url:  remoteURL + orderId,
+            url: localURL + orderId,
             dataType: "text",
             success: function (data) {
                 console.log("SUCCESS: ", data);
@@ -96,8 +96,8 @@ $(document).ready(function() {
             type: "GET",
             dataType: "json",
             contentType: "application/json",
-            url: remoteURL + "getOrdersByStatus/" + "?random=" + new Date().getTime(),
-            // url: localURL + "getOrdersByStatus/" + "?random=" + new Date().getTime(),
+            // url: remoteURL + "getOrdersByStatus/" + "?random=" + new Date().getTime(),
+            url: localURL + "getOrdersByStatus/" + "?random=" + new Date().getTime(),
             success: function (data) {
                 console.log("SUCCESS: ", data);
                 orders = data;

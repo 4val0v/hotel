@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded",function(){
     $.ajax({
         type:'GET',
         contentType: "application/json",
-        url: 'http://practice.relex.ru:81/api/rooms/' ,
+        url: 'http://localhost:81/api/rooms/' ,
         success: function(data, json){
         var rooms = doc.getElementById('content_rooms');   
     $.each(data, function(){

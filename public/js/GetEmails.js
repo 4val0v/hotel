@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $.ajax({
         type: 'GET',
         dataType: "json",
-        url: 'http://practice.relex.ru:81/api/emails',
+        url: 'http://localhost:81/api/emails',
         success: function (data) {
             var email_list = doc.getElementById('email_list');
 

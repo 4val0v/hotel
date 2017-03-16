@@ -14,8 +14,7 @@ public class Email {
     private String email;
 
     @Id
-    @SequenceGenerator(name = "emailIdSeq", sequenceName = "EMAIL_ID_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "emailIdSeq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     public int getId() {
         return id;

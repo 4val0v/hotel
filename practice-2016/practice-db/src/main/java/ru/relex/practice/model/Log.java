@@ -12,8 +12,7 @@ public class Log {
 
     @Id
     @Column(name = "LOG_ID")
-    @SequenceGenerator(name = "logIdSeq", sequenceName = "LOG_ID_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "logIdSeq")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @JoinColumn(name = "USER_ID", updatable = false)

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $.ajax({
         type: 'GET',
         dataType: "json",
-        url: 'http://practice.relex.ru:81/api/feedback',
+        url: 'http://localhost:81/api/feedback',
         success: function (data) {
             var fdbck = doc.getElementById("feedback");
 

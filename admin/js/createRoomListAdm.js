@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('#dataTables-example tbody').on('click', 'tr', function () {
         var table = $('#dataTables-example').DataTable();
         var data = table.row( this ).data();
-        location.replace('http://practice.relex.ru:81/admin/room-details-adm.html?id=' + data[0]);
+        location.replace('http://localhost:81/admin/room-details-adm.html?id=' + data[0]);
     } );
 });
 
@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded",function(){
 
     $.ajax({
         type:'GET',
-/*        url: 'http://localhost/practice-web/rooms/' ,*/
-        url: 'http://practice.relex.ru:81/api/rooms/' ,
+        url: 'http://localhost:81/api/rooms/' ,
+        // url: 'http://practice.relex.ru:81/api/rooms/' ,
         success: function(data, json){
         var rooms = doc.getElementById('content_rooms');
     $.each(data, function(){
@@ -64,8 +64,8 @@ document.addEventListener("DOMContentLoaded",function(){
         $.each(t.rows('.active').data(), function() {
             $.ajax({
                 type:'GET',
-/*                url: 'http://localhost/practice-web/api/rooms/remove?id=' + this[0],*/
-                url: 'http://practice.relex.ru:81/api/api_rooms/remove?id=' + this[0],
+                url: 'http://localhost:81/api/rooms/remove?id=' + this[0],
+                // url: 'http://practice.relex.ru:81/api/api_rooms/remove?id=' + this[0],
                 success: function(data){
                     alert(data);
                 },
@@ -78,6 +78,6 @@ document.addEventListener("DOMContentLoaded",function(){
     });
 
     $('#room-add-button').on('click', function() {
-        location.replace('http://practice.relex.ru:81/admin/room-details-adm.html?id=0');
+        location.replace('http://localhost:81/admin/room-details-adm.html?id=0');
     });
 });

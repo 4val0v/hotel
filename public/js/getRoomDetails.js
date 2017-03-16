@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded",function(){
     $.ajax({
         type:'GET',
         contentType: "application/json",
-        url: 'http://practice.relex.ru:81/api/rooms/id?id='+id ,
+        url: 'http://localhost:81/api/rooms/id?id='+id ,
         success: function(data, json){
                 var facilities = '';
                 var facilities_desc = '';
@@ -84,7 +84,7 @@ function getCoast(){
     $.ajax({
        type:'GET',
         contentType: "application/json",
-        url: 'http://practice.relex.ru:81/api/rooms/coast?dateBegin='+dateBegin.value+'&dateEnd='+dateEnd.value+'&id='+id,
+        url: 'http://localhost:81/api/rooms/coast?dateBegin='+dateBegin.value+'&dateEnd='+dateEnd.value+'&id='+id,
         success: function(data, json){
             var input_result = document.getElementById('result_coast');
             input_result.setAttribute("value",data.coast)

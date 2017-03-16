@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $.ajax({
         type: 'GET',
         dataType: "json",
-        url: 'http://practice.relex.ru:81/api/',
+        url: 'http://localhost:81/api/',
         success: function (data) {
             var top_five = doc.getElementById('top-five');
 

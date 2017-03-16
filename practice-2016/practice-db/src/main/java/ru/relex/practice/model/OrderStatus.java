@@ -7,8 +7,7 @@ import javax.persistence.*;
 public class OrderStatus {
 
     @Id
-    @SequenceGenerator(name = "orderStatusIdSec", sequenceName = "ORDERS_STATUS_SEQ", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "orderStatusIdSec")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private long id;
     
