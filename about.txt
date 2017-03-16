@@ -1,0 +1,25 @@
+Сайт отеля.
+Клиентский UI - http://104.154.248.69:81
+Админка - http://104.154.248.69:81/admin
+Моя задача в рамках проекта - управление бронированием(вкладки пункта "Бронирование"
+админки).
+Задачи менеджера:
+1. Согласование и отклонение заявок, пришедших с формы клиентского UI(коллега,
+который отвечал за форму не доделал задачу, в связи с чем ее нет).
+2. Поиск заявок в БД по определенным критериям(приоритет № брони-телефон-имя).
+Мои исходники:
+admin/managerorders.html
+admin/neworders.html
+admin/js/managerorders.js
+admin/js/neworders.js
+practice-2016/practice-db/src/main/java/ru/relex/practice:
+model/Order.java
+dao/OrderDAO.java(методы с английскими java doc)
+dao/impl/OrderDAOImpl.java
+practice-2016/practice-service/src/main/java/ru/relex/practice:
+enumeration/OrderStatusType.java
+mappings/OrderMapper.java
+service/OrderManagerService.java
+service/impl/OrderManagerServiceImpl.java
+practice-2016/practice-web/src/main/java/ru/relex/practice:
+controller/OrderManagerController.java

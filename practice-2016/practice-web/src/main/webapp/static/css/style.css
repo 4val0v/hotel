@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.content_rooms{
+    width: 70%;
+    height: auto;
+    margin: 30px;
+    padding: 10px, 50px, 10px, 0px;
+    border-color: black;
+    border-width: medium;
+    float: left;
+    display: inline-block;
+}
+
+.content_rooms .room{
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 5px;
+}
+
+.content_rooms .room .room_img{
+    width: 480px;
+    height: 290px;
+    background-color: aquamarine;
+    float: left;
+    display: inline-block;
+    
+}
+
+.content_rooms .room .room_info{
+    width: 40%;
+    height: 250px;
+    display: inline-block;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.content_rooms .room .room_info h2{
+    margin: 0px;
+    padding-left: 10%;
+    font-family: monospace;
+    color: brown;
+}
+.content_rooms .room .room_info h4{
+    margin: 0px;
+    padding-top: 10px;
+    padding-left: 10%;
+    color: darkslategray;    
+}
+
+.content_rooms .room .room_info hr {
+    margin-left: 10%;
+    border-color: grey;
+    
+}
+
+.content_rooms .room .room_info .facilities{
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-left: 10%;
+    padding-bottom: 0px;
+    height: 25px;
+} 
+
+.facilities img{
+    margin: 0;
+    padding: 0;
+    padding-right: 20px;
+    max-height: 25px;
+    max-width: 25px;
+}
+
+.room .facilities li{
+    display: inline;
+}
+
+.content_rooms .room .room_info .price p{
+    margin-top: 20px;
+    padding-left: 10%;
+    font-size: 14px;
+    font-family:monospace;
+}
+.content_rooms .room .room_info .price h6{
+    color: darkgrey;
+    margin: 5px;
+    padding: 0;
+    padding-left: 10%;
+}
+
+.general_facilities{
+    width: auto;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: ghostwhite;
+    font-family: monospace;
+    
+}
+
+.general_facilities li{
+        list-style-type: none;
+    }

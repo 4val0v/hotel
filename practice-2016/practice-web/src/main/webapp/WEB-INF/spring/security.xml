@@ -1,0 +1,38 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.1.xsd">
+
+    <http auto-config="false">
+        <intercept-url pattern="/security" access="isFullyAuthenticated()"/>
+        <intercept-url pattern="/security/admin**" access="hasRole('ROLE_ADMIN')"/>
+        <form-login login-page="/auth/login"
+                    username-parameter="login"
+                    password-parameter="password"
+                    authentication-failure-url="/auth/login?failed"/>
+        <csrf disabled="true"/>
+        <custom-filter position="LOGOUT_FILTER" ref="practiceLogoutFilter"/>
+    </http>
+
+    <authentication-manager>
+        <authentication-provider ref="authenticationProvider"/>
+    </authentication-manager>
+
+    <beans:bean id="userDetailsService" class="ru.relex.practice.security.PracticeUserDetailsService"/>
+
+    <beans:bean id="authenticationProvider" class="ru.relex.practice.security.PracticeAuthenticationProvider">
+        <beans:constructor-arg ref="userDetailsService"/>
+    </beans:bean>
+    <beans:bean id="practiceLogoutFilter" class="org.springframework.security.web.authentication.logout.LogoutFilter">
+        <beans:constructor-arg name="logoutSuccessUrl" value="/auth/login?logout"/>
+        <beans:constructor-arg name="handlers">
+            <beans:list>
+                <beans:bean id="myLogoutHandler" class="ru.relex.practice.security.LoggingLogoutHandler"/>
+                <beans:bean id="securityContextLogoutHandler" class="org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler"/>
+            </beans:list>
+        </beans:constructor-arg>
+    </beans:bean>
+
+    <beans:bean id="handlers" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler"/>
+</beans:beans>
