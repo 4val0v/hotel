@@ -20,7 +20,7 @@ import java.security.Principal;
 import java.util.List;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/main")
 public class MainController {
 
     @Autowired
@@ -32,17 +32,17 @@ public class MainController {
     @Autowired
     EmailService emailService;
 
-    @RequestMapping(method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public @ResponseBody List<RoomDTO> indexPage() {
         return roomService.getTopFive();
     }
 
-    @RequestMapping(value = "fdbck", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "fdbck", method = RequestMethod.GET)
     public @ResponseBody List<FeedbackDTO> fdbckOnIndexPage() {
         return feedbackService.getThreeMessages();
     }
 
-    @RequestMapping(method = RequestMethod.POST, consumes = "application/json")
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     @ResponseBody
     public String getEmail(@RequestBody EmailDTO email) {
         EmailDTO emailDTO = emailService.saveEmailFromJson(email);

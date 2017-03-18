@@ -14,7 +14,7 @@ $(function() {
     $.ajax({
         type:'GET',
         contentType: "application/json",
-        url: 'http://practice.relex.ru:81/api/chartdata' ,
+        url: 'http://localhost:81/api/stat/chartdata' ,
         success: function(datao){
             chart.setData(datao);
         }
@@ -24,7 +24,7 @@ $(function() {
         $.ajax({
             type: "GET",
             contentType: "application/json",
-            url: "http://practice.relex.ru:81/api/update",
+            url: "http://localhost:81/api/stat/update",
             success: function (datao) {
                 chart.setData(datao);
             }

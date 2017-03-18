@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $.ajax({
         type: 'GET',
         dataType: "json",
-        url: 'http://localhost:81/api/fdbck',
+        url: 'http://localhost:81/api/main/fdbck',
         success: function (data) {
 
             var feedbacks = doc.getElementById('feedbacks');

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded",function(){
     $.ajax({
         type:'GET',
         contentType: "application/json",
-        url: 'http://localhost:81/api/getstats' ,
+        url: 'http://localhost:81/api/stat/getstats' ,
         success: function(data){
             var statsRoom = doc.getElementById('statsRoom_panel');
             $.each(data, function(){

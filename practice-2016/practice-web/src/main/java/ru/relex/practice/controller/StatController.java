@@ -24,7 +24,7 @@ import java.util.List;
  * 11/24/2016.
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping("/stat")
 public class StatController {
 
     @Autowired

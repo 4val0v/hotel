@@ -229,7 +229,7 @@
 				<configuration>
 					<url>http://localhost:8080/manager/text</url>
 					<server>PracticeTomcatServer</server>
-					<path>/practice</path>
+					<path>/hotel</path>
 					<update>true</update>
 				</configuration>
 			</plugin>
